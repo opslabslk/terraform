@@ -48,5 +48,5 @@ resource "aws_instance" "name" {
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.allow_http.name}"]
   key_name        = "${aws_key_pair.new_ssh_key.key_name}"
-  user_data = "${file("userdata.sh")}"
+  user_data       = "${file("userdata.sh")}"
 }
